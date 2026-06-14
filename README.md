@@ -1,2 +1,2 @@
 # Multiscale-Box-Counting-Framework-for-Fractal-Dimension-Analysis-of-Vector-Lines
-Multiscale fractal dimension analysis of vector lines using box-counting method, ensemble statistics, BY-FDR validation, and scale-block bootstrap confidence intervals.
+Multiscale fractal dimension analysis of vector lines using box-counting method, ensemble statistics, BY-FDR validation, and scale-block bootstrap confidence intervals. [![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=roko-gis_Multiscale-Box-Counting-Framework-for-Fractal-Dimension-Analysis-of-Vector-Lines)](https://sonarcloud.io/summary/new_code?id=roko-gis_Multiscale-Box-Counting-Framework-for-Fractal-Dimension-Analysis-of-Vector-Lines)
