@@ -1,4 +1,9 @@
 # Multiscale-Box-Counting-Framework-for-Fractal-Dimension-Analysis-of-Vector-Lines
 Multiscale fractal dimension analysis of vector lines using box-counting method, ensemble statistics, BY-FDR validation, and scale-block bootstrap confidence intervals. [![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=roko-gis_Multiscale-Box-Counting-Framework-for-Fractal-Dimension-Analysis-of-Vector-Lines)](https://sonarcloud.io/summary/new_code?id=roko-gis_Multiscale-Box-Counting-Framework-for-Fractal-Dimension-Analysis-of-Vector-Lines) 
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=roko-gis_Multiscale-Box-Counting-Framework-for-Fractal-Dimension-Analysis-of-Vector-Lines&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=roko-gis_Multiscale-Box-Counting-Framework-for-Fractal-Dimension-Analysis-of-Vector-Lines)
+## Citation
+
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20685864.svg)](https://doi.org/10.5281/zenodo.20685864)
+
+**Cite this work:**  
+Iliev, R. (2026). *Multiscale Box-Counting Framework for Fractal Dimension Analysis of Vector Lines*. Zenodo. https://doi.org/10.5281/zenodo.20685864
