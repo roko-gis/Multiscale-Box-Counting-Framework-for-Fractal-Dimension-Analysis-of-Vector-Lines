@@ -1,0 +1,166 @@
+# Multiscale Box-Counting Framework for Fractal Dimension Analysis of Vector Lines
+
+> A multiscale alternative to conventional box-counting methods for vector line datasets.
+
+## Overview
+
+The **Multiscale Box-Counting Framework for Fractal Dimension Analysis of Vector Lines** is a implementation of the classical box-counting method designed specifically for vector line geometries.
+
+Unlike conventional box-counting approaches that rely on a single grid configuration and a single regression interval, this framework performs a multiscale analysis combined with statistical validation and uncertainty quantification to produce more stable and reproducible estimates of fractal dimension.
+
+The methodology integrates multiple grid shifts, deterministic rotations, automatic scaling-window detection, ensemble statistics, and bootstrap confidence intervals, providing a significantly more robust alternative to standard box-counting tools.
+
+---
+
+## Key Features
+
+### Multiscale Scaling Analysis
+Instead of using one manually selected scaling interval, the framework evaluates multiple candidate windows and identifies statistically meaningful scaling regimes.
+
+### Rotation and Grid-Shift Invariance
+To reduce sensitivity to arbitrary grid placement, box counts are averaged across:
+
+- deterministic SO(2) rotations;
+- multiple grid offsets.
+
+### Automatic Window Selection
+Candidate scaling windows are evaluated using:
+
+- coefficient of determination (R²);
+- regression uncertainty;
+- Spearman rank correlation;
+- local curvature analysis.
+
+### False Discovery Rate Control
+Multiple testing is controlled using the **Benjamini–Yekutieli False Discovery Rate (BY-FDR)** procedure, reducing the probability of selecting spurious scaling regions.
+
+### Ensemble Fractal Dimension Estimation
+The final fractal dimension is obtained from a **median ensemble** of statistically significant windows rather than from a single regression.
+
+### Scale-Block Bootstrap Confidence Intervals
+Uncertainty is quantified using a scale-block bootstrap procedure that preserves correlations between neighboring scales.
+
+The framework provides:
+
+- 95% confidence intervals;
+- coefficient of variation;
+- stability metrics.
+
+### Confidence Classification
+Results are automatically classified into:
+
+- HIGH
+- MEDIUM
+- LOW
+- UNRELIABLE
+
+according to:
+
+- regression quality;
+- bootstrap interval width;
+- estimate stability;
+- consistency across scaling windows.
+
+### Publication-Grade Visualization
+The framework generates figures containing:
+
+- log-log regression plots;
+- confidence intervals;
+- scale stability curves;
+- representative grid configurations;
+- summary quality metrics.
+
+---
+
+## Methodological Advantages over Conventional Box Counting
+
+| Conventional Box Counting | Multiscale Framework |
+|---------------------------|---------------------|
+| Single grid configuration | Multiple grid shifts |
+| Fixed orientation | Deterministic rotations |
+| Single regression | Ensemble estimation |
+| User-defined scale range | Automatic multiscale search |
+| No multiple-testing correction | BY-FDR validation |
+| No uncertainty estimation | Scale-block bootstrap CI |
+| Sensitive to outliers | Median aggregation |
+| Limited quality assessment | Confidence classification |
+
+---
+
+## Workflow
+
+1. Generate logarithmically distributed scales.
+2. Perform box counting over multiple rotations and grid shifts.
+3. Average box occupancies.
+4. Search candidate scaling windows.
+5. Apply BY-FDR multiple-testing correction.
+6. Select statistically significant windows.
+7. Estimate fractal dimension using median ensemble statistics.
+8. Compute bootstrap confidence intervals.
+9. Evaluate stability metrics.
+10. Generate publication-quality outputs.
+
+---
+
+## Output Metrics
+
+The framework reports:
+
+- Fractal Dimension (D)
+- 95% Confidence Interval
+- R²
+- Coefficient of Variation (CV)
+- Stability Score
+- Positive Window Fraction
+- Confidence Level
+- Scale Stability Curves
+
+---
+
+## Applications
+
+Suitable for the analysis of:
+
+- geological fracture networks;
+- fault traces;
+- river systems;
+- coastlines;
+- transportation networks;
+- biological branching structures;
+- other vector line datasets exhibiting scale-dependent complexity.
+
+---
+
+## Dependencies
+
+- Python 3
+- NumPy
+- SciPy
+- Matplotlib
+- QGIS Python API (PyQGIS)
+
+The software is implemented as a Python Processing Tool script and runs inside the QGIS Processing Framework.
+---
+
+## Example Output
+
+```text
+Fractal Dimension D = 1.62
+95% CI = [1.58, 1.67]
+R² = 0.992
+CV(D) = 3.1%
+Confidence = HIGH
+```
+
+---
+
+## Example Figures
+
+Example outputs and screenshots are provided in the `screenshots/` directory.
+---
+
+## License
+
+This project is released under the MIT License.
+
+---
